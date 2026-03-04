@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sticky Notes App | Quick notes, fast workflow</title>
+    <meta
+      name="description"
+      content="Sticky Notes App: a simple, clean sticky notes web app with an easy local setup guide."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="brand">
+            <img class="logo" src="assets/logo.png" alt="Sticky Notes App logo" />
+            <div>
+              <p class="badge">Django • CRUD • MVT</p>
+              <h1>Sticky Notes App</h1>
+            </div>
+          </div>
+
+          <p class="subtitle">
+            A simple, distraction-free sticky notes web app — create, edit, and manage notes in seconds.
+          </p>
+
+          <div class="cta-row">
+            <a class="button" href="#how-to">How to run it</a>
+            <a class="button button-outline" href="#features">Features</a>
+            <a
+              class="button button-ghost"
+              href="https://github.com/PerryRichardson/Sticky-Notes-App"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h2 class="hero-card-title">Quick preview</h2>
+          <ul class="checklist">
+            <li>Clean note list</li>
+            <li>Create & edit notes</li>
+            <li>Delete notes safely</li>
+            <li>Simple local setup</li>
+          </ul>
+          <p class="muted small">
+            Screenshots are shown below. Add more anytime by dropping images into <code>docs/assets/</code>.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <section class="card" id="features">
+        <h2>What it does</h2>
+        <div class="grid">
+          <div>
+            <h3>Create notes fast</h3>
+            <p>
+              Add a new sticky note with a title and content. Your notes are saved and displayed in a clean list.
+            </p>
+          </div>
+          <div>
+            <h3>Edit and update</h3>
+            <p>
+              Update existing notes without losing your flow. Great for quick drafts, reminders, or short logs.
+            </p>
+          </div>
+          <div>
+            <h3>Delete when you’re done</h3>
+            <p>Remove notes you no longer need to keep your workspace tidy.</p>
+          </div>
+          <div>
+            <h3>Built with Django</h3>
+            <p>
+              Demonstrates MVT architecture, CRUD, templates, static files, and migrations — ideal for learning.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" id="screenshots">
+        <h2>Screenshots</h2>
+        <p class="muted">
+          These are real screenshots from the running app. Files live in <code>docs/assets/</code>.
+        </p>
+
+        <div class="screenshot-grid">
+          <figure class="shot">
+            <img src="assets/home.png" alt="Sticky Notes App notes list view" />
+            <figcaption>Home / notes list view</figcaption>
+          </figure>
+
+          <figure class="shot">
+            <img src="assets/create.png" alt="Create a new note screen" />
+            <figcaption>Create a new note</figcaption>
+          </figure>
+
+          <figure class="shot">
+            <img src="assets/edit.png" alt="Edit note screen" />
+            <figcaption>Edit an existing note</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="card" id="how-to">
+        <h2>How to run it locally</h2>
+        <p class="muted">
+          This is a Django app, so you run it on your machine (GitHub Pages can’t run the backend — this page is the
+          static guide).
+        </p>
+
+        <ol class="steps">
+          <li>
+            <strong>Clone the repository</strong>
+            <pre><code>git clone https://github.com/PerryRichardson/Sticky-Notes-App.git
+cd Sticky-Notes-App</code></pre>
+          </li>
+
+          <li>
+            <strong>Create and activate a virtual environment</strong>
+            <pre><code>python -m venv .venv</code></pre>
+            <p class="muted small">Windows (PowerShell):</p>
+            <pre><code>.venv\Scripts\Activate.ps1</code></pre>
+            <p class="muted small">macOS/Linux:</p>
+            <pre><code>source .venv/bin/activate</code></pre>
+          </li>
+
+          <li>
+            <strong>Install dependencies</strong>
+            <pre><code>pip install -r requirements.txt</code></pre>
+          </li>
+
+          <li>
+            <strong>Run migrations</strong>
+            <pre><code>python manage.py migrate</code></pre>
+          </li>
+
+          <li>
+            <strong>Start the server</strong>
+            <pre><code>python manage.py runserver</code></pre>
+            <p class="muted small">Then open:</p>
+            <pre><code>http://127.0.0.1:8000/notes/</code></pre>
+          </li>
+        </ol>
+      </section>
+
+      <section class="card" id="routes">
+        <h2>Handy routes</h2>
+        <ul class="bullets">
+          <li><code>/notes/</code> — Notes list</li>
+          <li><code>/notes/create/</code> — Create a note (or use the Create button)</li>
+          <li><code>/notes/&lt;id&gt;/edit/</code> — Edit a note</li>
+          <li><code>/notes/&lt;id&gt;/delete/</code> — Delete a note</li>
+        </ul>
+        <p class="muted small">
+          If your app uses slightly different paths, update this section to match your <code>urls.py</code>.
+        </p>
+      </section>
+
+      <footer class="footer">
+        <p class="muted">
+          Built by Perryn Richardson •
+          <a href="https://github.com/PerryRichardson/Sticky-Notes-App" target="_blank" rel="noreferrer">GitHub repo</a>
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
