@@ -1,37 +1,41 @@
-# Django Sticky Notes App
+# Sticky Notes App
 
-This is a web-based sticky notes application built with Django. It allows users to create, read, update, and delete (CRUD) personal notes.  
-The project also includes a separate app (`posts`) used for learning and demonstrating Django unit testing with models and views.
-This app was built during the HyperionDev Software Engineering Bootcamp.
+A Django-based sticky notes application, containerised using Docker.
 
----
+## Prerequisites
 
-# Features:
+- Docker Desktop installed and running
 
-### Notes App (`notes/`)
-- Create a new note
-- View all notes
-- Edit existing notes
-- Delete notes
-- Clean, responsive UI
+## Implementation Steps
 
-### Posts App (`posts/`)
-- Separate test app for learning Django's `TestCase`
-- Demonstrates how to write unit tests for:
-  - Models
-  - Views (list and detail)
+### 1. Clone the repository
+```bash
+git clone https://github.com/PerryRichardson/Sticky-Notes-App.git
+cd Sticky-Notes-App
+```
 
----
+### 2. Build the Docker image
+```bash
+docker build -t sticky-notes-app ./
+```
 
-##Technologies Used
+### 3. Run the container
+```bash
+docker run -p 8000:8000 sticky-notes-app
+```
 
-- Python 3.13
-- Django 5.x
-- HTML & CSS (via Django templates)
-- Git & GitHub
+### 4. Access the application
+Open your browser and navigate to:
+```
+http://127.0.0.1:8000/notes/
+```
 
----
+### 5. Stop the container
+Press `CTRL + C` in the terminal to stop the running container.
 
-## Once installed, view apps at:
-http://127.0.0.1:8000/notes/ → Sticky Notes App
-http://127.0.0.1:8000/posts/ → Testing App (Bulletin Board)
+## Docker Hub
+
+The image is also available on Docker Hub:
+```
+docker pull perryrich/sticky-notes-app
+```
